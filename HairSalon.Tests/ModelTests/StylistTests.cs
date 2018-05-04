@@ -8,15 +8,15 @@ namespace HairSalonApp.Tests
 {
 
     [TestClass]
-    public class StylistTests : IDisposable
+    public class StylistModelTests : IDisposable
     {
         public void Dispose()
         {
-            Item.DeleteAll();
-            Category.DeleteAll();
+            Stylist.DeleteAll();
+            //Client.DeleteAll();
         }
 
-        public ItemTests()
+        public void StylistTests()
         {
             DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=eva_antipina_test;";
         }
@@ -27,7 +27,7 @@ namespace HairSalonApp.Tests
         {
             //Arrange
             //Act
-            int result = Stylist.GetAll().Count;
+            int result = Stylist.GetAllStylists().Count;
 
             //Assert
             Assert.AreEqual(0, result);

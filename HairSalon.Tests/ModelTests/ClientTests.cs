@@ -8,29 +8,29 @@ namespace HairSalonApp.Tests
 {
 
     [TestClass]
-    public class ClientTests : IDisposable
+    public class ClientModelTests : IDisposable
     {
         public void Dispose()
         {
-            Item.DeleteAll();
-            Category.DeleteAll();
+            Stylist.DeleteAll();
+            //Client.DeleteAll();
         }
 
-        public ItemTests()
+        public void ClientTests()
         {
             DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=eva_antipina_test;";
         }
 
 
-        [TestMethod]
-        public void GetAllClients_DbStartsEmpty_0()
-        {
-            //Arrange
-            //Act
-            int result = Client.GetAll().Count;
-
-            //Assert
-            Assert.AreEqual(0, result);
-        }
+        // [TestMethod]
+        // public void GetAllClients_DbStartsEmpty_0()
+        // {
+        //     //Arrange
+        //     //Act
+        //     int result = Client.GetAll().Count;
+        //
+        //     //Assert
+        //     Assert.AreEqual(0, result);
+        // }
      }
   }
