@@ -17,6 +17,12 @@ _It will let salon employee to:_
 
 * _The program returns the list of hair salon stylists if user click on "All stylists.", or "There are no stylist currently hired." if there are no stylists in the database._
 
+* _The program saves the information about new stylist collected from the user input in database._
+
+* _The program returns all details of one hair stylist if user click on that particular stylist._
+
+* _The program deletes all information about all stylists if user hits the button "Delete All"._
+
 
 ## Setup/Installation Requirements
 
@@ -33,8 +39,8 @@ _It will let salon employee to:_
 
 * _> CREATE DATABASE hair_salon;_
 * _> USE hair_salon;_
-* _> CREATE TABLE stylists (id serial PRIMARY KEY, name VARCHAR(255), phoneNumber VARCHAR(255), specialization VARCHAR(255), workingDays VARCHAR(255), time VARCHAR(255));_
-* _> CREATE TABLE clients (id serial PRIMARY KEY, name VARCHAR(255), stylistID VARCHAR(255), phoneNumber VARCHAR(255), DateOfBirth VARCHAR(255), notes VARCHAR(255));_
+* _> CREATE TABLE stylists (id serial PRIMARY KEY, name VARCHAR(255), phone_number VARCHAR(255), specialization VARCHAR(255), working_days VARCHAR(255), time VARCHAR(255));_
+* _> CREATE TABLE clients (id serial PRIMARY KEY, name VARCHAR(255), stylistID VARCHAR(255), phone_number VARCHAR(255), DateOfBirth VARCHAR(255), notes VARCHAR(255));_
 
 ## Known Bugs
 
