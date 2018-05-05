@@ -13,7 +13,7 @@ namespace HairSalonApp.Tests
         public void Dispose()
         {
             Stylist.DeleteAll();
-            //Client.DeleteAll();
+            Client.DeleteAll();
         }
 
         public void StylistTests()
@@ -60,7 +60,7 @@ namespace HairSalonApp.Tests
         }
 
         [TestMethod]
-        public void Save_SavesToDatabase_ItemList()
+        public void Save_SavesToDatabase_StylistList()
         {
             //Arrange
             Stylist testStylist = new Stylist("Rita", "4259740000", "Monday, Tuesday, Friday", "9am - 6pm", "colorist");
@@ -120,7 +120,7 @@ namespace HairSalonApp.Tests
         }
 
         [TestMethod]
-        public void DeleteStylist_DeleteWriteStylistInDatabase_Stylist()
+        public void DeleteStylist_DeleteRightStylistInDatabase_Stylist()
         {
             //Arrange
             Stylist firstStylist = new Stylist("Rita", "4259740000", "colorist", "Monday, Tuesday, Friday", "9am - 6pm");

@@ -23,6 +23,18 @@ _It will let salon employee to:_
 
 * _The program deletes all information about all stylists if user hits the button "Delete All"._
 
+* _The program save new client information to database and associate this client with certain stylist._
+
+* _The program returns the list off clients, if needed._
+
+* _The program returns the list of this stylist clients, if needed._
+
+* _The program delete all clients from database, if user hits the button "Delete all clients"._
+
+* _The program delete one client, if user clicks on "Delete" button._
+
+* _The program delete all clients of this particular stylist, if needed._
+
 
 ## Setup/Installation Requirements
 
