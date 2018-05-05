@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hair Salon</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Miracle</h1>
+      <h2>Hair Salon</h2>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Hair Stylists:</h3>
+          <ul>
+          @if (@Model["stylists"].Count == 0)
+          {
+              <p>There are no hair stylist currently working.</p>
+          } else {
+            foreach (var stylist in @Model["stylists"])
+            {
+                <li><a href="/stylist/@stylist.GetId()/details"><span class="name">@stylist.GetName()</span></a></li>
+            }
+          }
+          </ul>
+          <form action="/stylists/delete" method="post">
+            <button type="subbmit" class="btn btn-danger">Delete All</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h3>Clients:</h3>
+          <ul>
+          @if (@Model["clients"].Count == 0)
+          {
+              <p>There are no clients yet.</p>
+          } else {
+            foreach (var client in @Model["clients"])
+            {
+                <li><a href="/client/@client.GetId()/details"><span class="name">@client.GetName()</span></a></li>
+            }
+          }
+          </ul>
+          <form action="/clients/delete" method="post">
+            <button type="subbmit" class="btn btn-danger">Delete All</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
